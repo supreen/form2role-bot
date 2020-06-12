@@ -1,0 +1,12 @@
+{
+  "token": "<your discord token>",
+"refreshrate":"60000",
+  "range":"A2:E",
+ "spreadsheetId":"<your spreadsheet id>",
+"apiKey":"<your api>",
+  
+  "refreshrate":"60000", 
+  "roles": [],
+  "usernamesp": []
+
+}
