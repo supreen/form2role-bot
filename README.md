@@ -59,7 +59,7 @@ Please note that the bot start detecting the data from 2nd row of spreadsheet. <
 </ul>
 <h3>More info</h3>
 <ul>
-<li>The bot checks the sheet for new users and roles every minute. However you can change that in the code.</li>
+<li>The bot checks the sheet for new users and roles every minute. However you can change that in the code. i.e refresh rate in discord.json. it is in miliseconds</li>
         
 <li>The bot only supports upto 4 roles in column 2, 3, 4 ,5 </li>
 
