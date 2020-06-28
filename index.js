@@ -5,8 +5,7 @@
 var checked;
 var checking = [];
 const Discord = require("discord.js");
-const {token,usernamesp, roles, apiKey, spreadsheetId, range, refreshrate} = require("./config/discord.json");
-console.log(token+" "+usernamesp+" "+roles+" "+apiKey+" "+spreadsheetId+" "+range+" "+refreshrate)
+const {usernameorid, token,usernamesp, roles, apiKey, spreadsheetId, range, unremoveableroles, refreshrate} = require("./config/discord.json");
 const { google } = require("googleapis");
 
   const connection = google.sheets({
@@ -68,7 +67,7 @@ const fetchRows = async (spreadsheetId, range, sheetsConnection) => {
       
       
 const therolenames = rows123[1]+","+rows123[2]+","+rows123[3]+","+rows123[4];
-console.log(rows123[0].trim()+"   "+therolenames.trim());
+
     
       assignRoles(rows123[0].trim(), therolenames.trim());
   
@@ -110,9 +109,10 @@ const assignRoles = async (usernames, roleNames) => {
  
     
     const guildRoles = client.guilds.array()[0].roles.array();
-    
-  
+    // deleting unremovable roles from the list
+  const Roles2 = guildRoles.filter(Role => !unremoveableroles.includes(Role.name));
     // * getting Role instances of role names
+    const removedRoles = guildRoles.filter(Role => unremoveableroles.includes(Role.name));
     const Roles = guildRoles.filter(Role => roleNames.includes(Role.name));
    //role number of all members in the group
    
@@ -121,16 +121,26 @@ const assignRoles = async (usernames, roleNames) => {
     // * getting GuildMember instances of usernames and setting roles
     guildMembers.forEach(async member => {
      
+      const  username= member.user.username + "#" + member.user.discriminator;
+    
+ 
+  //check if the first column of spreadsheet matches the userid/username of discord
+
+var UNcheck;
       
-      const username = member.user.username + "#" + member.user.discriminator;
-   
-      
-          
-          
-      
+      if (usernameorid=="UN"){
   
+   UNcheck=username
   
-      if (usernames.includes(username)) {
+  }else{
+    
+  UNcheck=member.id8
+    
+    
+  }
+
+  
+  if (usernames.includes(UNcheck))  {
         
         const notAssignedRoles = [];
         
@@ -153,30 +163,40 @@ const assignRoles = async (usernames, roleNames) => {
                   //Check whether the roles (discord) are in roles (spreadsheet)
           
           
-          
-             if (Roles.includes(member.roles.array()[1]) || member.roles.array()[1]==null){
-             }else{checked="yes" }    
-               if (Roles.includes(member.roles.array()[2]) || member.roles.array()[2]==null){
+        
+              if (Roles.includes(member.roles.array()[1])|| removedRoles.includes(member.roles.array()[1])|| member.roles.array()[1]==null){
+             
+              }else{checked="yes" }    
+                if (Roles.includes(member.roles.array()[2]) || removedRoles.includes(member.roles.array()[2]) || member.roles.array()[2]==null){
+              
                }else{checked="yes"; }    
-                 if (Roles.includes(member.roles.array()[3]) || member.roles.array()[3]==null){
+                    if (Roles.includes(member.roles.array()[3]) || removedRoles.includes(member.roles.array()[3])|| member.roles.array()[3]==null){
+                  
                  }else{checked="yes"; }    
-                   if (Roles.includes(member.roles.array()[4]) || member.roles.array()[4]==null){
+                   if (Roles.includes(member.roles.array()[4])|| removedRoles.includes(member.roles.array()[4]) || member.roles.array()[4]==null){
+           
                    }else{checked="yes"; }    
           
                     
                            //Check whether the roles (Spreadsheet) are in roles (Discord)
            
                     
-              if (member.roles.array().includes(Roles[0]) || Roles[0]==null){
+              if (member.roles.array().includes(Roles[0])|| removedRoles.includes(Roles[0]) || Roles[0]==null){
+              
               }else{checked="yes"; }    
-                  if (member.roles.array().includes(Roles[1]) || Roles[1]==null){
+               if (member.roles.array().includes(Roles[1]) || removedRoles.includes(Roles[1])|| Roles[1]==null){
+          
+             
                   }else{checked="yes"; }    
-                      if (member.roles.array().includes(Roles[2]) || Roles[2]==null){
+                        if (member.roles.array().includes(Roles[2]) || removedRoles.includes(Roles[2]) || Roles[2]==null){
+            
                       }else{checked="yes"; }    
-                          if (member.roles.array().includes(Roles[3]) || Roles[3]==null){
-                         }else{checked="yes"; }    
-                            
-                    
+                             if (member.roles.array().includes(Roles[3])|| removedRoles.includes(Roles[3]) || Roles[3]==null){
+             
+                          }else{checked="yes"; }    
+             
+     
+          
                       if (checked=="yes"){ 
                         notAssignedRoles.push(role);
                       }
@@ -185,98 +205,35 @@ const assignRoles = async (usernames, roleNames) => {
         
         if (notAssignedRoles.length > 0) {
         
-        await member.removeRoles(guildRoles); member.addRoles(Roles);
         
-      
-          console.log(
-            "Assigned " +
-              notAssignedRoles.map(role => role.name) +
-              " to " +
-              username + " on " + new Date().toString()
-          );
-        } else {
-              
-          console.log(username + " already has all the roles assigned");
-        }
-      }
-    });
-  } catch (err) {
-    logError(err);
-  }
-};
-
-
-
-const assignRoles2 = async (usernames, roleNames,) => {
-
- 
-  try {
-    const guildMembers = client.guilds.array()[0].members.array();
- 
-    //number of all members in the group
- 
-    
-    const guildRoles = client.guilds.array()[0].roles.array();
-    
-  
-    // * getting Role instances of role names
-    const Roles = guildRoles.filter(Role => roleNames.includes(Role.name));
-   //role number of all members in the group
-   
-
-    roleNames.length=0;
-    // * getting GuildMember instances of usernames and setting roles
-    guildMembers.forEach(async member => {
      
-      
-      const username = member.user.username + "#" + member.user.discriminator;
-   
-      
-          
-          
-      
-  
-  
-      if (usernames.includes(username)) {
-        
-        const notAssignedRoles = [];
-        
-       
-      
-        
-        
-        
-        
-        Roles.forEach(role => {
-       
-         //if (!member.roles.array().includes(Roles)) {
-         //if (!guildRoles.includes(Roles)) {
-          
-          
-      
-         
           
         
-      notAssignedRoles.push(role);      
-                       
+     
+          
+          await  member.removeRoles(Roles2); member.addRoles(Roles);
+ 
+          
+          
+        
+        
       
-        });
-        if (notAssignedRoles.length > 0) {
-        
-        await member.removeRoles(guildRoles); 
-          await member.addRoles(Roles);
-        
-      var d = new Date().toString();
           console.log(
             "Assigned " +
               notAssignedRoles.map(role => role.name) +
               " to " +
-              username + " " + d
+              username +  " ["+member.id+"] on " + new Date().toString()
           );
         } else {
               
-          console.log(username + " already has all the roles assigned");
-        }
+            if (Roles[0]==null && Roles[1]==null && Roles[2]==null && Roles[3]==null) {
+             member.removeRoles(Roles2);
+       console.log(username + " ["+member.id+"] has all roles removed on"+ new Date().toString());     
+          }else{
+          
+          console.log(username + " ["+member.id+"] already has all the roles assigned, checked on "+ new Date().toString());
+          }
+          }
       }
     });
   } catch (err) {
