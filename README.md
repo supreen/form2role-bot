@@ -69,3 +69,13 @@ Please note that the bot start detecting the data from 2nd row of spreadsheet. <
 <li>Future updates will include mainly bug fixes.</li>
 <li>Contributions are highly apreciated.</li>
 </ul>
+
+
+<h3>New updates on 28/06/2020</h3>
+
+<li>Now the bot can detect userid instead of username. change the value of "usernameorid" in discord.json. i.e ["username":"UN"] for detecting username and ["username":"UI"] for detecting userid </li>
+<li>We just realized that bot was throwing "missing permission" error when it was trying to remove unremovable roles. there now you can put unremoveable roles or the roles you dont want this bot to remove in "unremoveableroles" in discord.json. i.e "unremoveableroles":["bot","serverboost"] </li>
+<li>The bot was doing nothing when all roles were removed, it detects and removes all roles now</li>
+<li>Now it throws time in console when the bot assign or remove roles of a user</li>
+
+
