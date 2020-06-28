@@ -4,7 +4,8 @@
   "range":"A2:E",
  "spreadsheetId":"<your spreadsheet id>",
 "apiKey":"<your api>",
-  
+  "unremoveableroles":["<the roles(seperated by comma) you believe bot can not remove like server boost role or bot role>"],
+   "usernameorid":"<Type "UN" here for username and "UI" for userid>", 
   "refreshrate":"60000", 
   "roles": [],
   "usernamesp": []
