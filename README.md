@@ -1,5 +1,4 @@
 Form2Role-Bot:
-
 <h2>About</h2> 
 <p>This is the simplified version of <a href="https://github.com/talios0" target="_blank">talios0's</a> and <a href="https://github.com/The24thDS" target="_blank">The24thDS's </a> bot. The bot assigns the roles (according to the 2nd,3rd,4th and 5th column of the spreadsheet) to the usernames found in a 1st column of Google Sheet. Made possible by the amazing Discord.js library.
 Please note that the bot start detecting the data from 2nd row of spreadsheet. </p>
@@ -79,3 +78,5 @@ Please note that the bot start detecting the data from 2nd row of spreadsheet. <
 <li>Now it throws time in console when the bot assign or remove roles of a user</li>
 
 
+Consider buying me a coffee, if you liked my work.
+https://www.buymeacoffee.com/suprin
