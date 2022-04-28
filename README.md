@@ -1,7 +1,7 @@
 Form2Role-Bot:
 <h2>About</h2> 
-<p>This is the simplified version of <a href="https://github.com/talios0" target="_blank">talios0's</a> and <a href="https://github.com/The24thDS" target="_blank">The24thDS's </a> bot. The bot assigns the roles (according to the 2nd,3rd,4th and 5th column of the spreadsheet) to the usernames found in a 1st column of Google Sheet. Made possible by the amazing Discord.js library.
-Please note that the bot start detecting the data from 2nd row of spreadsheet. </p>
+<p>This is the simplified version of <a href="https://github.com/talios0" target="_blank">talios0's</a> and <a href="https://github.com/The24thDS" target="_blank">The24thDS's </a> bot. The bot assigns the roles (according to the 2nd,3rd,4th and 5th column of the spreadsheet) to the usernames found in the 1st column of a Google Sheet. Made possible by the amazing Discord.js library.
+Please note that the bot begins to detect the data starting in the 2nd row of spreadsheet. </p>
 <h2>Motivation</h2>
 <p>Did you ever want to add some kind of authentication to your Discord server? Maybe you want only people with a certain email domain to have access to some channels. Use a form to collect the required data and then set up this bot to automatically assign roles to everyone found in the Google Sheet.</p>
 
@@ -62,7 +62,7 @@ Please note that the bot start detecting the data from 2nd row of spreadsheet. <
         
 <li>The bot only supports upto 4 roles in column 2, 3, 4 ,5 </li>
 
-<li>Once you enter a "sexyusername#1111" in the spreadsheet, you can no longer control its roles from dicord. the bot will revert the roles back to the roles mentioned in the spreadsheet. </li>
+<li>Once you enter a "sexyusername#1111" in the spreadsheet, you can no longer control its roles from Discord. the bot will revert the roles back to the roles mentioned in the spreadsheet. </li>
         
         
 <li>Future updates will include mainly bug fixes.</li>
