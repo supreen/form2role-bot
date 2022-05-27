@@ -78,8 +78,8 @@ Please note that the bot start detecting the data from 2nd row of spreadsheet. <
 <li>Now it throws time in console when the bot assign or remove roles of a user</li>
 
 
-Consider buying me a coffee, if you loved my work.
-https://www.buymeacoffee.com/suprin
+<h3>Consider buying me a coffee, if you loved my work.</h3>
+<li>https://www.buymeacoffee.com/suprin
 
-If you are still finding it hard, Hire me 
-https://www.fiverr.com/supreen
+<h3>If you are still finding it hard, Hire me</h3> 
+<li>https://www.fiverr.com/supreen
