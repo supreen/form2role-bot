@@ -80,3 +80,6 @@ Please note that the bot start detecting the data from 2nd row of spreadsheet. <
 
 Consider buying me a coffee, if you loved my work.
 https://www.buymeacoffee.com/suprin
+
+If you are still finding it hard, Hire me 
+https://www.fiverr.com/supreen
