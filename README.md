@@ -87,7 +87,7 @@ Please note that the bot start detecting the data from 2nd row of spreadsheet. <
         <li>Right click on the server icon</li>        
         <li>Choose roles</li>
         <li>drag the bot role above all roles</li>
-![Image of higher role](https://github.com/supreen/form2role-bot/blob/master/Image/highrole.JPG)
+![Image of higher role]([https://github.com/supreen/form2role-bot/blob/master/Image/highrole.JPG](https://github.com/supreen/form2role-bot/blob/master/Image/highrole.JPG?raw=true))
 
 <h3>New demo added on 22/06/2022</h3>
 <li>Spreadsheet link: </li>
