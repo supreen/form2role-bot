@@ -6,7 +6,8 @@ Please note that the bot start detecting the data from 2nd row of spreadsheet. <
 <p>Did you ever want to add some kind of authentication to your Discord server? Maybe you want only people with a certain email domain to have access to some channels. Use a form to collect the required data and then set up this bot to automatically assign roles to everyone found in the Google Sheet.</p>
 
 <h2>Required fields</h2>
-<p>The only field that you must have in your Google Form and Google Sheet is the DiscordID. Your DiscordID it's made up of your username and the discriminator, and it looks like this: SomeSexyUsername#4565. The bot needs it to identify users and assign roles to them.</p>
+<p>The only field that you must have in your Google Form and Google Sheet is the DiscordID. Your DiscordID it's made up of your username and the discriminator, and it looks like this: SomeSexyUsername#4565. The bot needs it to identify users and assign roles to them.(When you selected "UN" in discord.config)</p>
+<p>With new update, now you can also add USERID which is unique id and can be found by right clicking on the username and clicking on "COPY ID" it will be something like "696051693519503421" (When you selected "UI" in discord.config).</p>
 
 <h2>How to get your Google details<h2>
         <h3>API key</h3>
