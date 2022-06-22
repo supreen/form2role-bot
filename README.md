@@ -83,8 +83,10 @@ Please note that the bot start detecting the data from 2nd row of spreadsheet. <
 <li>Always add "@everyone" and other unremovable roles in unremovable roles under config/discord.json </li>
 <li>You should manually give more permission to your bot roles as shown in the picture below </li>
 ![Image of Permission](https://github.com/supreen/form2role-bot/master/image/permission.JPG)
-![Test Image 5
-<li>Your bot role much be higher than another role as shown in the picture below </li>
+<h2>Your bot role much be higher than another role as shown in the picture below </h2>
+        <li>Right click on the server icon</li>        
+        <li>Choose roles</li>
+        <li>drag the bot role above all roles</li>
 ![Image of higher role](https://github.com/supreen/form2role-bot/master/image/highrole.JPG)
 
 <h3>New demo added on 22/06/2022</h3>
