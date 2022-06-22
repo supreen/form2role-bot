@@ -78,6 +78,19 @@ Please note that the bot start detecting the data from 2nd row of spreadsheet. <
 <li>Now it throws time in console when the bot assign or remove roles of a user</li>
 
 
+
+<h3>New Information updates on 22/06/2022</h3>
+<li>Always add "@everyone" and other unremovable roles in unremovable roles under config/discord.json </li>
+<li>You should manually give more permission to your bot roles as shown in the picture below </li>
+<li>Your bot role much be higher than another role as shown in the picture below </li>
+
+<h3>New demo added on 22/06/2022</h3>
+<li>Spreadsheet link: </li>
+<li>Discord chaneel: </li>
+
+<h3>Free free to edit the roles preferable just checking and unchecking the roles. please be cautious, a wrong move can crash the bot.</h3>
+
+
 <h3>Consider buying me a coffee, if you loved my work.</h3>
 <li>https://www.buymeacoffee.com/suprin
 
