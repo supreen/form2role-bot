@@ -85,20 +85,21 @@ Please note that the bot start detecting the data from 2nd row of spreadsheet. <
 <br>
         <h3>You should manually give more permission to your bot roles as shown in the picture below </h3>
  <li>Right click on the server "icon"</li>        
-        <li>Click on "Server Setting" from drop menu"</li
+        <li>Click on "Server Setting" from drop menu"</li>
         <li>Click "Roles" from the drop menu of "server settings</li>
         <li>Click "Roles" menu click on the "role" assigned to your bot</li>
         <li>Click "Roles" menu click on the "role" assigned to your bot</li>
-       <li>Go to "Permissions" Tab and give all permissions to your bot</li>   
+       <li>Go to "Permissions" Tab and give all permissions to your bot</li>
+        
 ![Image of Permission](https://github.com/supreen/form2role-bot/blob/master/Image/permission.jpg?raw=true)
 <br>
         <h2>Your bot role much be higher than another role as shown in the picture below </h2>
         <li>Right click on the server "icon"</li>        
-        <li>Click on "Server Setting" from drop menu"</li
+        <li>Click on "Server Setting" from drop menu"</li>
         <li>Click "Roles" from the drop menu of "server settings</li>
         <li>drag the bot role above all roles</li>
 ![Image of higher role](https://github.com/supreen/form2role-bot/blob/master/Image/highrole.JPG?raw=true)
-
+<br>
 <h3>New demo added on 22/06/2022</h3>
 <li>Spreadsheet link: </li>
 <li>Discord chaneel: </li>
