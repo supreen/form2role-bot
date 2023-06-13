@@ -115,4 +115,10 @@ Please note that the bot start detecting the data from 2nd row of spreadsheet. <
 <li>https://www.buymeacoffee.com/suprin
 
 <h3>If you are still finding it hard, Hire me</h3> 
+<li>https://sobdar.com/order (you get 30% off here and you can also put your query there)
 <li>https://www.fiverr.com/supreen
+
+<h3> For more contact please visit:
+<li>https://sobdar.com/wa (Whatsapp)
+<li>https://sobdar.com/fbmsg (Messenger)
+<li>https://sobdar.com/fb (fbpage)
